@@ -1,0 +1,88 @@
+/* an.css — Darstellung der Analysis-Bausteine (Koordinatensysteme, Widgets) */
+.an-plot{margin:8px 0; background:var(--nv-surface-2); border:1px solid var(--nv-border); border-radius:12px; padding:6px 6px 2px;}
+.an-plot svg{display:block; max-width:100%; height:auto;}
+.an-grid line{stroke:var(--nv-border); stroke-width:1; opacity:.7;}
+.an-axis{stroke:var(--nv-text-muted); stroke-width:1.3;}
+.an-tick{font:11px "IBM Plex Mono",monospace; fill:var(--nv-text-muted);}
+.an-axlabel{font:12px "Public Sans",sans-serif; fill:var(--nv-text-muted);}
+.an-leg{font:12px "Public Sans",sans-serif; fill:var(--nv-text);}
+.an-note{font:12px "IBM Plex Mono",monospace; fill:var(--nv-text-muted);}
+.an-ref{stroke:var(--nv-text-muted); stroke-width:1.1; fill:none;}
+.an-curve{fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round;}
+.an-c1{stroke:var(--nv-accent-strong); color:var(--nv-accent-strong);} .an-c2{stroke:var(--afb3); color:var(--afb3);}
+.an-c3{stroke:var(--afb1); color:var(--afb1);} .an-c4{stroke:var(--afb2); color:var(--afb2);} .an-c5{stroke:var(--theme-physik); color:var(--theme-physik);}
+.an-note.an-c1,.an-note.an-c2,.an-note.an-c3,.an-note.an-c4,.an-note.an-c5{stroke:none; fill:currentColor;}
+.an-pt{stroke-width:2; fill:currentColor;} .an-pt.open{fill:var(--nv-surface-2);}
+.an-pt.an-c1{fill:var(--nv-accent-strong);} .an-pt.an-c2{fill:var(--afb3);} .an-pt.an-c3{fill:var(--afb1);} .an-pt.an-c4{fill:var(--afb2);}
+.an-pt.open{fill:var(--nv-surface-2) !important;}
+.an-fill.an-a1{fill:var(--nv-accent);} .an-fill.an-a2{fill:var(--afb3);} .an-fill.an-a3{fill:var(--afb1);} .an-fill.an-a4{fill:var(--afb2);}
+.an-widget{margin:14px 0;}
+.an-title{font-family:"Fraunces",serif; font-weight:600; margin-bottom:8px;}
+.an-info{font-weight:400; font-size:.92rem; line-height:1.55;}
+.an-info table{margin:.4em 0;}
+.an-g{color:var(--afb1);} .an-r{color:var(--afb3);} .an-ok{color:var(--afb1);} .an-bad{color:var(--afb3);}
+.an-hint{color:var(--nv-text-muted); font-size:.86rem;}
+.an-val{font:.8rem "IBM Plex Mono",monospace; color:var(--nv-accent-strong);}
+.an-btnrow{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; align-items:center;}
+.an-btn{border:1px solid var(--nv-border); background:var(--nv-surface); color:var(--nv-text); font:inherit; font-size:.86rem; font-weight:600; padding:6px 14px; border-radius:999px; cursor:pointer;}
+.an-btn:hover{background:var(--nv-accent-soft);}
+.an-two{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:8px;}
+.an-opts{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:10px; margin:8px 0;}
+.an-opt{border:2px solid var(--nv-border); background:var(--nv-surface); border-radius:12px; padding:2px; cursor:pointer;}
+.an-opt:hover{border-color:var(--nv-accent);} .an-opt.ok{border-color:var(--afb1); background:var(--afb1-soft);} .an-opt.bad{border-color:var(--afb3); background:var(--afb3-soft);}
+.an-opt .an-plot{margin:0; border:none; background:transparent;}
+.an-quiz .an-q{padding:10px 0; border-bottom:1px solid var(--nv-border);}
+.an-mc{display:grid; gap:6px; margin:6px 0;}
+.an-mcbtn{text-align:left; border:1px solid var(--nv-border); background:var(--nv-surface); color:var(--nv-text); font:inherit; border-radius:10px; padding:8px 12px; cursor:pointer;}
+.an-mcbtn:hover{background:var(--nv-surface-2);} .an-mcbtn.ok{border-color:var(--afb1); background:var(--afb1-soft);} .an-mcbtn.bad{border-color:var(--afb3); background:var(--afb3-soft);}
+.an-fb{margin-top:6px; font-size:.92rem;} .an-quizscore{margin-top:10px; font-weight:600;}
+.an-term{width:100%; max-width:420px;}
+tr.an-warn td{background:var(--afb2-soft);}
+.an-frame{width:100%; height:min(82vh,780px); border:1px solid var(--nv-border); border-radius:12px; background:var(--nv-surface);}
+.an-slider input[type=range]{width:100%;}
+.nv-merke{border-left:4px solid var(--afb1); background:var(--afb1-soft); border-radius:0 10px 10px 0; padding:10px 14px; margin:14px 0;}
+.nv-merke > :last-child{margin-bottom:0;}
+.nv-fehler{border-left:4px solid var(--afb3); background:var(--afb3-soft); border-radius:0 10px 10px 0; padding:10px 14px; margin:14px 0;}
+.nv-fehler ul{margin:.3em 0 0; padding-left:1.2em;}
+.nv-fehler li{margin:.25em 0;}
+.nv-idee{border-left:4px solid var(--theme-physik); background:var(--theme-physik-soft); border-radius:0 10px 10px 0; padding:10px 14px; margin:14px 0;}
+.nv-idee > :last-child{margin-bottom:0;}
+.an-pfad{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+.an-pfad a, .an-pfad button{border:1px solid var(--nv-border); background:var(--nv-surface); color:var(--nv-text); font:inherit; font-size:.88rem; padding:7px 13px; border-radius:999px; cursor:pointer; text-decoration:none;}
+.an-pfad a:hover, .an-pfad button:hover{background:var(--nv-accent-soft);}
+.an-soon{border:1px dashed var(--nv-border); border-radius:12px; padding:18px; color:var(--nv-text-muted); background:var(--nv-surface-2);}
+.an-langnote{border:1px solid var(--afb2); background:var(--afb2-soft); border-radius:10px; padding:8px 12px; margin-bottom:14px; font-size:.9rem;}
+.nv-section-body h3{margin:1.3em 0 .45em; font-size:1.08rem; color:var(--nv-accent-strong);}
+.nv-section-body h4{margin:1em 0 .35em; font-size:.98rem;}
+.nv-section-body ol, .nv-section-body ul{margin:.4em 0 .9em; padding-left:1.4em; max-width:72ch;}
+.nv-section-body li{margin:.25em 0;}
+.nv-section-body p{max-width:74ch;}
+.an-sketch svg{width:min(100%,430px); margin:0 auto;}
+/* Aufgabenkarten */
+.badge-abschnitt{background:var(--nv-accent-soft); color:var(--nv-accent-strong);}
+.an-score{font:.78rem "IBM Plex Mono",monospace; padding:3px 9px; border-radius:999px; border:1px solid var(--nv-border); color:var(--nv-text-muted);}
+.an-score.some{border-color:var(--afb2); color:var(--afb2);} .an-score.all{border-color:var(--afb1); color:var(--afb1); background:var(--afb1-soft);}
+.an-aufg{margin-bottom:8px;} .an-grafik{margin:10px 0;}
+.an-teil{border:1px solid var(--nv-border); border-radius:12px; padding:10px 14px; margin:10px 0; background:var(--nv-surface);}
+.an-teil.done{border-color:var(--afb1); background:var(--afb1-soft);}
+.an-frage{margin-bottom:6px;}
+.an-inrow{display:inline-flex; gap:8px; align-items:center; flex-wrap:wrap; margin:4px 0;}
+.an-in{width:9.5em;} .an-in.an-term{width:min(100%,26em);} .an-unit{color:var(--nv-text-muted);}
+.an-ta{width:100%; font-family:inherit; resize:vertical;}
+.an-mc{display:grid; gap:6px; margin:6px 0;}
+.an-mcopt{display:flex; gap:8px; align-items:flex-start; border:1px solid var(--nv-border); border-radius:10px; padding:8px 10px; cursor:pointer; background:var(--nv-surface);}
+.an-mcopt:hover{background:var(--nv-surface-2);} .an-mcopt input{margin-top:.3em;}
+.an-hilfe{margin:6px 0; padding:8px 12px; border-left:4px solid var(--theme-physik); background:var(--theme-physik-soft); border-radius:0 8px 8px 0; font-size:.93rem;}
+.an-lsg{margin-top:6px; padding:8px 12px; background:var(--nv-surface-2); border-radius:8px;}
+.an-btn-sm{padding:4px 11px; font-size:.8rem;}
+.an-filter{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:0 0 14px;}
+.an-chip{border:1px solid var(--nv-border); background:var(--nv-surface); color:var(--nv-text); font:inherit; font-size:.82rem; padding:4px 11px; border-radius:999px; cursor:pointer;}
+.an-chip.on{background:var(--nv-accent); color:#fff; border-color:var(--nv-accent);}
+.an-progress{margin-top:10px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+.an-bar{width:180px; height:8px; border-radius:99px; background:var(--nv-surface-3); overflow:hidden;} .an-bar span{display:block; height:100%; background:var(--afb1);}
+
+.an-kartenh{margin:1.4em 0 .5em; font-size:1.05rem; color:var(--nv-accent-strong);}
+.an-kartengrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:10px;}
+.an-kartenlink{display:flex; flex-direction:column; gap:3px; border:1px solid var(--nv-border); border-left:5px solid var(--afb1); border-radius:10px; padding:10px 12px; background:var(--nv-surface); color:var(--nv-text); text-decoration:none;}
+.an-kartenlink.afb2{border-left-color:var(--afb2);} .an-kartenlink.afb3{border-left-color:var(--afb3);}
+.an-kartenlink:hover{background:var(--nv-surface-2);} .an-kn{font:.72rem "IBM Plex Mono",monospace; color:var(--nv-text-muted); text-transform:uppercase;}
